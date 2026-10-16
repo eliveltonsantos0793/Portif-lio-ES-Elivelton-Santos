@@ -1,31 +1,32 @@
-#Recursos
+# Portfólio — Elivelton Santos
 
-- Layout Responsivo com Bootstrap 3
-- Construído com HTML5 & CSS3 
-- Design Moderno
-- Cabeçalho com Fundo em Tela Cheia
-- Código e Conteúdo Otimizados
-- Mostre seu trabalho de forma mais atrativa.
-- Pronto para HiDPI / Retina
-- Código Limpo
-- Suporte ao IE 9
-- SEO Otimizado
-- 100% Totalmente Customizável
-- Cabeçalho Fixo
-- Google Fonts
-- Forte foco em Usabilidade e UX
-- Ícones FontAwesome Integrados
-- Funciona com Google Hosted Library e MaxCDN.
-- CSS e JS Minificados incluídos para carregamento mais rápido.
-- Interface limpa e estilosa
-- Código bem comentado
-- Fácil de usar
-- É Grátis!
+Portfólio pessoal responsivo desenvolvido com **HTML5, CSS3 e JavaScript puro**, sem frameworks ou dependências obrigatórias de JavaScript.
 
-#Captura de Tela
+## Recursos
 
-![Captura de Tela do HTML5](https://raw.githubusercontent.com/technext/Developer/master/Features/html5.png)
+- Layout responsivo para celular, tablet e desktop.
+- Menu mobile acessível com botão de abrir/fechar.
+- Seções de apresentação, sobre mim, serviços, projetos, processo de trabalho e contato.
+- Metadados básicos para SEO e compartilhamento.
+- Animações suaves com suporte a `prefers-reduced-motion`.
+- Links para GitHub, LinkedIn, WhatsApp e e-mail.
+- Formulário de contato usando FormSubmit.
+- CSS, JavaScript e imagens organizados em pastas.
 
-#Link Demo
+## Estrutura
 
-Confira a demo do template HTML responsivo Flusk em (https://themewagon.com/demo/Developer)
+```text
+portfolio-elivelton-html-css-js/
+├── index.html
+├── README.md
+└── assets/
+    ├── css/
+    │   └── style.css
+    ├── js/
+    │   └── script.js
+    └── images/
+        ├── logo-elivelton.png
+        ├── barbearia-paulista.png
+        └── ...
+```
+
