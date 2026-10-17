@@ -69,8 +69,8 @@
     sections.forEach((section) => sectionObserver.observe(section));
   }
 
-  // Envio do formulário.
-  const form = document.getElementById("contact-form-js");
+  // Envio do formulário
+ /* const form = document.getElementById("contact-form-js");
   const status = document.getElementById("form-status");
   const btn = document.getElementById("form-submit-btn");
 
@@ -112,6 +112,6 @@
         btn.innerHTML = "Enviar mensagem <span aria-hidden=\"true\">↗</span>";
       }
     });
-  }
+  }*/
 
 })();

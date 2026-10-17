@@ -337,6 +337,58 @@
   </footer>
   <a class="whatsapp-float" href="https://wa.me/5548996696014" target="_blank" rel="noopener noreferrer"
     aria-label="Conversar pelo WhatsApp"><img src="./assets/images/whatsapp.png" alt="logo whatsapp"></a>
+
+
+  <script>
+    (() => {
+      const form = document.getElementById("contact-form-js");
+      const status = document.getElementById("form-status");
+      const btn = document.getElementById("form-submit-btn");
+
+      if (!form || !status || !btn) {
+        console.error("Elementos do formulário não encontrados.");
+        return;
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        btn.disabled = true;
+        btn.setAttribute("aria-disabled", "true");
+        btn.innerHTML = "Enviando...";
+        status.textContent = "Enviando sua mensagem...";
+        status.style.color = "#d1d5db";
+
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+              Accept: "application/json"
+            }
+          });
+
+          const data = await response.json().catch(() => ({}));
+
+          if (!response.ok || String(data.success) !== "true") {
+            throw new Error(data.message || "Não foi possível enviar sua mensagem.");
+          }
+
+          status.textContent = "Mensagem enviada com sucesso! Obrigado pelo contato.";
+          status.style.color = "#4CAF50";
+          form.reset();
+        } catch (error) {
+          console.error(error);
+          status.textContent = error.message || "Ocorreu um erro ao enviar a mensagem.";
+          status.style.color = "#ff5252";
+        } finally {
+          btn.disabled = false;
+          btn.setAttribute("aria-disabled", "false");
+          btn.innerHTML = 'Enviar mensagem <span aria-hidden="true">↗</span>';
+        }
+      });
+    })();
+  </script>
 </body>
 
 </html>
